@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - GreatAfrica Cosmetics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GreatAfrica Cosmetics</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="cart">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <div id="cart-summary">
+                <!-- Cart items will be dynamically added here -->
+                <p>Your cart is empty.</p>
+            </div>
+            <button id="checkout-button">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GreatAfrica Cosmetics. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/YourPageName" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartSummary = document.getElementById('cart-summary');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            function updateCartSummary() {
+                cartSummary.innerHTML = '';
+                if (cart.length === 0) {
+                    cartSummary.innerHTML = '<p>Your cart is empty.</p>';
+                } else {
+                    cart.forEach(item => {
+                        const itemElement = document.createElement('div');
+                        itemElement.classList.add('cart-item');
+                        itemElement.innerHTML = `
+                            <img src="${item.image}" alt="${item.name}">
+                            <div class="cart-item-details">
+                                <p>${item.name}</p>
+                                <p>${item.quantity} x ${item.price}</p>
+                            </div>
+                        `;
+                        cartSummary.appendChild(itemElement);
+                    });
+                }
+            }
+
+            updateCartSummary();
+        });
+    </script>
+</body>
+</html>

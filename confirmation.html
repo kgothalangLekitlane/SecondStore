@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - GreatAfrica Cosmetics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GreatAfrica Cosmetics</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="cart.html" id="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="confirmation">
+        <div class="container">
+            <h2>Order Confirmation</h2>
+            <p>Thank you for your purchase!</p>
+            <p>Your order details:</p>
+            <div id="order-details"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GreatAfrica Cosmetics. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/YourPageName" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderDetailsElement = document.getElementById('order-details');
+            const checkoutData = JSON.parse(localStorage.getItem('checkoutData'));
+
+            if (checkoutData) {
+                orderDetailsElement.innerHTML = `
+                    <p>Name: ${checkoutData.name}</p>
+                    <p>Email: ${checkoutData.email}</p>
+                    <p>Address: ${checkoutData.address}</p>
+                    <p>Card Number: ${checkoutData['card-number']}</p>
+                    <p>Expiry Date: ${checkoutData['expiry-date']}</p>
+                    <p>CVV: ${checkoutData.cvv}</p>
+                `;
+                
+                // Clear the checkout data from localStorage
+                localStorage.removeItem('checkoutData');
+            } else {
+                orderDetailsElement.innerHTML = '<p>No order data found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

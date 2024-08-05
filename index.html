@@ -8,22 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>GreatAfrica Cosmetics</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="cart">
-                <a href="#cart" id="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
+ <!-- Header -->
+<header>
+    <div class="container">
+        <h1>GreatAfrica Cosmetics</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <div id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                    <p>Your cart is empty.</p>
+                </div>
+                <a href="cart.html" id="view-cart">View Cart</a>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
+
 
     <section id="home" class="hero">
         <div class="container">
@@ -149,15 +159,16 @@
     </section>
 
     <section id="cart">
-        <div class="container">
-            <h2>Your Cart</h2>
-            <div id="cart-summary">
-                <!-- Cart items will be dynamically added here -->
-                <p>Your cart is empty.</p>
-            </div>
-            <button id="checkout-button">Proceed to Checkout</button>
+    <div class="container">
+        <h2>Your Cart</h2>
+        <div id="cart-summary">
+            <!-- Cart items will be dynamically added here -->
+            <p>Your cart is empty.</p>
         </div>
-    </section>
+        <a href="checkout.html" id="checkout-button" class="button">Proceed to Checkout</a>
+    </div>
+</section>
+
 
     <section id="checkout" style="display:none;">
         <div class="container">
@@ -181,15 +192,36 @@
     </section>
 
     <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>GreatAfrica Cosmetics is dedicated to providing the best cosmetics and skincare products to help you look and feel your best.We offer a wide range of products from Fragrances to different soaps and skin care products best suited for your skin type.Our Products are 100% organic and have all passed the necessary standards and regulations tests by trusted bodies .</p>
+    <div class="container">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>GreatAfrica Cosmetics is dedicated to providing the best cosmetics and skincare products to help you look and feel your best. We offer a wide range of products from Fragrances to different soaps and skincare products best suited for your skin type. Our products are 100% organic and have all passed the necessary standards and regulations tests by trusted bodies.</p>
+                <p>We believe in enhancing natural beauty and ensuring our products are both effective and safe for our customers. Discover the difference with GreatAfrica Cosmetics!</p>
+            </div>
+            <div class="about-image">
+                <img src="https://th.bing.com/th/id/OIP.mbeDQ3NgBVO2fHKeMExNJwHaEK?rs=1&pid=ImgDetMain" alt="About Us">
+            </div>
         </div>
-    </section>
+        <div class="testimonials">
+            <h3>What Our Customers Say</h3>
+            <div class="testimonial">
+                <p>"GreatAfrica Cosmetics transformed my skincare routine! The products are high-quality and make a noticeable difference."</p>
+                <p>- Sarah M.</p>
+            </div>
+            <div class="testimonial">
+                <p>"I love the natural ingredients and the variety of products. Highly recommend GreatAfrica Cosmetics!"</p>
+                <p>- John D.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
             <form action="#" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -199,8 +231,41 @@
                 <textarea id="message" name="message" required></textarea>
                 <button type="submit">Send</button>
             </form>
+            <div class="contact-info">
+                <h3>Our Address</h3>
+                <p>65 Bree street, building 4<br>Johannesburg, GP 12345</p>
+                <p>Email: contact@greatafricacosmetics.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <div id="map"><iframe
+                               width="100%"
+                               height="300"
+                               frameborder="0"
+                               style="border:0"
+                               src="https://www.google.com/maps/place/Virginia/@-28.1340415,26.6354946,11z/data=!3m1!4b1!4m19!1m12!4m11!1m3!2m2!1d26.5594894!2d-27.7431881!1m6!1m2!1s0x1e919f8a06cc9bb3:0x42f3569f51e956e6!2sVirginia!2m2!1d26.8627464!2d-28.0937818!3m5!1s0x1e919f8a06cc9bb3:0x42f3569f51e956e6!8m2!3d-28.0937818!4d26.8627464!16zL20vMDQ0NzFj?entry=ttu"
+                               allowfullscreen>
+    </iframe>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+         <section id="comments">
+    <div class="container">
+        <h2>Customer Comments</h2>
+        <div id="comment-list">
+            <!-- Comments will be dynamically added here -->
+        </div>
+        <h3>Leave a Comment</h3>
+        <form id="comment-form">
+            <label for="comment-name">Name:</label>
+            <input type="text" id="comment-name" name="name" required>
+            <label for="comment-message">Message:</label>
+            <textarea id="comment-message" name="message" required></textarea>
+            <button type="submit">Submit Comment</button>
+        </form>
+    </div>
+</section>
+
 
     <footer>
         <div class="container">
