@@ -3,283 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Cosmetics Store</title>
+    <title>GreatAfrica Cosmetics</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
- <!-- Header -->
-<header>
-    <div class="container">
-        <h1>GreatAfrica Cosmetics</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="cart">
-            <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
-            <div id="cart-dropdown" class="cart-dropdown">
-                <div id="cart-items">
-                    <!-- Cart items will be dynamically added here -->
-                    <p>Your cart is empty.</p>
+    <header>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger-icon" id="hamburger-icon">&#9776;</div>
+            <nav class="hamburger-dropdown" id="hamburger-dropdown">
+                <ul>
+                    <li><a href="#hair">Hair</a></li>
+                    <li><a href="#bundle-save">Bundle & Save</a></li>
+                    <li><a href="#wash-day">Wash Day</a></li>
+                    <li><a href="#beard">Beard</a></li>
+                    <li><a href="#body">Body</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#learn">Learn</a></li>
+                    <li><a href="#login">Log In</a></li>
+                    <li><a href="#help">Help</a></li>
+                </ul>
+                <div class="register-login">
+                    <a href="#register">Register to Log In</a>
                 </div>
-                <a href="cart.html" id="view-cart">View Cart</a>
+            </nav>
+        </div>
+        <div class="header-content">
+            <h1 class="site-name">GreatAfrica Cosmetics</h1>
+            <nav class="main-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#shop">Shop</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-buttons">
+                <div class="search-button" id="search-button">&#128269;</div>
+                <div class="cart-button" id="cart-button">&#128722;</div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-
-
-    <section id="home" class="hero">
-        <div class="container">
+    <section id="home" class="home-section">
+        <div class="home-content">
             <h2>Welcome to GreatAfrica Cosmetics</h2>
-            <p>Your one-stop shop for all things beauty.</p>
+            <p>Your one-stop shop for all your beauty needs. Explore our wide range of products designed for your hair, skin, and body.</p>
+            <button class="shop-now">Shop Now</button>
+        </div>
+        <div class="background-image"></div>
+    </section>
+
+    <section id="as-seen" class="as-seen-section">
+        <h2>As Seen In</h2>
+        <div class="magazines">
+            <div class="magazine">Vogue</div>
+            <div class="magazine">Cosmopolitan</div>
+            <div class="magazine">Essence</div>
+            <div class="magazine">Glamour</div>
         </div>
     </section>
 
-    <section id="products">
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="category-buttons">
-                <button class="category-button" data-category="fragrances">Fragrances</button>
-                <button class="category-button" data-category="soaps">Soaps</button>
-                <button class="category-button" data-category="skincare">Skincare</button>
+    <section id="best-sellers" class="best-sellers-section">
+        <h2>Best Selling Products</h2>
+        <div class="best-sellers-grid">
+            <div class="product-card">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product Name 1</h3>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="price">$29.99</div>
             </div>
-
-            <div id="fragrances" class="product-category">
-                <h3>Fragrances</h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="https://www.bing.com/th?id=OPEC.cOaaDc2exT6zyg474C474&o=5&pid=21.1&w=124&h=124&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="Fragrance 1">
-                        <h3>Lemon scent fragrance</h3>
-                        <p>R65.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://img.fragrancex.com/images/products/sku/large/fblack34m.webp" alt="Fragrance 2">
-                        <h3>F Black By salvatore Ferragamo</h3>
-                        <p>R592.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://img.fragrancex.com/images/products/sku/large/voyams.webp" alt="Fragrance 1">
-                        <h3>Nautica Voyage</h3>
-                        <p>R350.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://img.fragrancex.com/images/products/sku/large/emt34tt.webp" alt="Fragrance 1">
-                        <h3>Eternity By Calvin Klein</h3>
-                        <p>R591.17</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://img.fragrancex.com/images/products/sku/large/lacblanc.webp" alt="Fragrance 1">
-                        <h3>Lacoste Eau De Lacoste L.12.12 Blanc Cologne</h3>
-                        <p>R959.20</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://img.fragrancex.com/images/products/sku/large/clm42.webp" alt="Fragrance 1">
-                        <h3>Chrome Legend Cologne</h3>
-                        <p> R 643.70</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    
-                    
-                </div>
+            <div class="product-card">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product Name 2</h3>
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <div class="price">$39.99</div>
             </div>
+            <!-- Add more products as needed -->
+        </div>
+    </section>
 
-            <div id="soaps" class="product-category" >
-                <h3>Soaps</h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/45055c7bd6625e97d8b770a5cfa190c0.jpg?imageView2/2/w/800/q/70/format/webp" alt="Soap 1">
-                        <h3>Natural Handmade Sandalwood Soap Handmade Essential Oil Soap Cleansing Bath Soap Hydrating And Moisturizing</h3>
-                        <p>R86.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://img.kwcdn.com/product/open/2023-03-16/1678955390055-1d0e9035e29a47d28c940884531b0f48-goods.jpeg?imageView2/2/w/800/q/70/format/webp" alt="Soap 2">
-                        <h3>Cologne Scented Soap, Mens Mite Removal Bar Soap, Deep Cleans Pores, Removes Dead Skin, Deep Skin Cleansing And Oil-Control, Rich And Dense Foam, Moisturizing Scented Bath Soap For Men, Mild And Non-irritating Travel Essentials</h3>
-                        <p>R146.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://img.kwcdn.com/product/fancy/7bfc47b4-42ab-4279-8308-c123fcd923ab.jpg?imageView2/2/w/800/q/70/format/webp" alt="Soap 2">
-                        <h3> 2.28 Fl.Oz Niacinamide Silk Soap, Goat Milk Soap, Facial Wash Soap, Shower Soap, Cleansing, Facial Oil Control, Herbal Nourishing, Handmade Essential Oil Soap, Milk Fragrance, Suitable For Men And Women 80g Father's Day Gift</h3>
-                        <p>R146.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                     <div class="product-card">
-                        <img src="https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/bd12054a028908d8320063a7279c78e0.jpg?imageView2/2/w/800/q/70/format/webp" alt="Soap 2">
-                        <h3>Turmeric Soap Bar For Face & Body, Turmeric Body Wash Soap, Rejuvenates & Cleanses Skin </h3>
-                        <p>R146.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://img.kwcdn.com/product/fancy/05ebc8d0-b9ee-41d5-8ee9-aa8f6ef2402c.jpg?imageView2/2/w/800/q/70/format/webp" alt="Soap 2">
-                        <h3>Juhop Aloe Vera Natural Soap 100g, Deep Cleansing Handmade Bar for Face, Hands, Feet, Body, Moisturizing, Refreshing for Healthy Youthful Skin, Suitable for Men and Women, Alcohol-Free, Coconut Active Ingredient, Cleansing Sheet Form, Tightens Pores </h3>
-                        <p>R79</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/4ea4b8f161cf3d2627c33afe9056343e.jpg?imageView2/2/w/800/q/70/format/webp" alt="Soap 2">
-                        <h3>Rosemary Shampoo Soap | Deep Cleansing Oil Control Beauty Hair Care Hair Strengthens Essential Oil Shampoo Bar Moisturizing Scalp Solution For Men Women </h3>
-                        <p>R46</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    
-                </div>
-            </div>
+    <button class="shop-all">Shop All</button>
 
-            <div id="skincare" class="product-category">
-                <h3>Skincare</h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="skincare1.jpg" alt="Skincare 1">
-                        <h3>Skincare 1</h3>
-                        <p></p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="skincare2.jpg" alt="Skincare 2">
-                        <h3>Skincare 2</h3>
-                        <p></p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
+    <section id="about-owner" class="about-owner-section">
+        <h2>About the Owner</h2>
+        <div class="owner-bio">
+            <img src="owner.jpg" alt="Owner Photo" class="owner-photo">
+            <div class="owner-info">
+                <p><strong>Jane Doe</strong> is the visionary behind GreatAfrica Cosmetics. With a passion for natural beauty and a commitment to quality, Jane founded the company to bring premium, ethically sourced cosmetics to the market. Her dedication to empowering people through beauty has driven the success of GreatAfrica Cosmetics, making it a trusted name in the industry.</p>
             </div>
         </div>
     </section>
 
-    <section id="cart">
-    <div class="container">
-        <h2>Your Cart</h2>
-        <div id="cart-summary">
-            <!-- Cart items will be dynamically added here -->
-            <p>Your cart is empty.</p>
+    <section id="shop-bundles" class="shop-bundles-section">
+        <h2>Shop Bundles</h2>
+        <div class="promotion-text">
+            <h3>Special Bundle Sale!</h3>
+            <p>For a limited time only, enjoy exclusive discounts on our premium bundles. Buy more, save more!</p>
+            <p>Enter code <strong>BUNDLE20</strong> at checkout for an additional 20% off!</p>
+            <button class="shop-now-bundles">Shop Bundles Now</button>
         </div>
-        <a href="checkout.html" id="checkout-button" class="button">Proceed to Checkout</a>
-    </div>
-</section>
-
-
-    <section id="checkout" style="display:none;">
-        <div class="container">
-            <h2>Checkout</h2>
-            <form id="checkout-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
-                <label for="card-number">Card Number:</label>
-                <input type="text" id="card-number" name="card-number" required>
-                <label for="expiry-date">Expiry Date:</label>
-                <input type="text" id="expiry-date" name="expiry-date" required>
-                <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" required>
-                <button type="submit">Complete Purchase</button>
-            </form>
+        <div class="promotions-info">
+            <div class="promotion-item">
+                <img src="rand-icon.png" alt="Save 15%" class="promotion-icon">
+                <p>SAVE 15% on every order</p>
+            </div>
+            <div class="promotion-item">
+                <img src="box-icon.png" alt="Swap" class="promotion-icon">
+                <p>SWAP, SKIP OR CANCEL ANYTIME</p>
+            </div>
+            <div class="promotion-item">
+                <img src="star-icon.png" alt="Money Back Guarantee" class="promotion-icon">
+                <p>90 DAY MONEY BACK GUARANTEE</p>
+            </div>
         </div>
     </section>
 
-    <section id="about">
-    <div class="container">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>GreatAfrica Cosmetics is dedicated to providing the best cosmetics and skincare products to help you look and feel your best. We offer a wide range of products from Fragrances to different soaps and skincare products best suited for your skin type. Our products are 100% organic and have all passed the necessary standards and regulations tests by trusted bodies.</p>
-                <p>We believe in enhancing natural beauty and ensuring our products are both effective and safe for our customers. Discover the difference with GreatAfrica Cosmetics!</p>
+    <section id="testimonials" class="testimonials-section">
+        <h2>Customer Testimonials</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <img src="customer1.jpg" alt="Customer 1">
+                <p>"This product completely transformed my hair. The results were amazing!"</p>
+                <h4>- Jane Doe</h4>
             </div>
-            <div class="about-image">
-                <img src="https://th.bing.com/th/id/OIP.mbeDQ3NgBVO2fHKeMExNJwHaEK?rs=1&pid=ImgDetMain" alt="About Us">
+            <div class="testimonial-card">
+                <img src="customer2.jpg" alt="Customer 2">
+                <p>"I love how soft my skin feels after using these products. Highly recommend!"</p>
+                <h4>- John Smith</h4>
             </div>
+            <!-- Add more testimonials as needed -->
         </div>
-        <div class="testimonials">
-            <h3>What Our Customers Say</h3>
-            <div class="testimonial">
-                <p>"GreatAfrica Cosmetics transformed my skincare routine! The products are high-quality and make a noticeable difference."</p>
-                <p>- Sarah M.</p>
-            </div>
-            <div class="testimonial">
-                <p>"I love the natural ingredients and the variety of products. Highly recommend GreatAfrica Cosmetics!"</p>
-                <p>- John D.</p>
-            </div>
-        </div>
-    </div>
-</section>
+        <button class="read-reviews">READ ALL REVIEWS</button>
+    </section>
 
-
-    <section id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <div class="contact-content">
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <div class="contact-info">
-                <h3>Our Address</h3>
-                <p>65 Bree street, building 4<br>Johannesburg, GP 12345</p>
-                <p>Email: contact@greatafricacosmetics.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <div id="map"><iframe
-                               width="100%"
-                               height="300"
-                               frameborder="0"
-                               style="border:0"
-                               src="https://www.google.com/maps/place/Virginia/@-28.1340415,26.6354946,11z/data=!3m1!4b1!4m19!1m12!4m11!1m3!2m2!1d26.5594894!2d-27.7431881!1m6!1m2!1s0x1e919f8a06cc9bb3:0x42f3569f51e956e6!2sVirginia!2m2!1d26.8627464!2d-28.0937818!3m5!1s0x1e919f8a06cc9bb3:0x42f3569f51e956e6!8m2!3d-28.0937818!4d26.8627464!16zL20vMDQ0NzFj?entry=ttu"
-                               allowfullscreen>
-    </iframe>
-                </div>
-            </div>
+    <section id="reviews" class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div class="review-images">
+            <img src="review1.jpg" alt="Review 1">
+            <img src="review2.jpg" alt="Review 2">
+            <img src="review3.jpg" alt="Review 3">
         </div>
-    </div>
-</section>
-         <section id="comments">
-    <div class="container">
-        <h2>Customer Comments</h2>
-        <div id="comment-list">
-            <!-- Comments will be dynamically added here -->
-        </div>
-        <h3>Leave a Comment</h3>
-        <form id="comment-form">
-            <label for="comment-name">Name:</label>
-            <input type="text" id="comment-name" name="name" required>
-            <label for="comment-message">Message:</label>
-            <textarea id="comment-message" name="message" required></textarea>
-            <button type="submit">Submit Comment</button>
-        </form>
-    </div>
-</section>
+    </section>
 
+    <section id="products" class="products-section">
+        <h2>All Products</h2>
+        <!-- Products grid will go here -->
+    </section>
+
+    <button class="shop-bundles">Shop Bundles</button>
+
+    <section id="quiz" class="quiz-section">
+        <h2>Take Our Quiz</h2>
+        <!-- Quiz content will go here -->
+    </section>
+
+    <section id="money-back" class="money-back-section">
+        <h2>Claim Your Money Back</h2>
+        <button class="money-back-button">Money Back</button>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 GreatAfrica Cosmetics. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/YourPageName" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
+        <p>&copy; 2024 GreatAfrica Cosmetics. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
